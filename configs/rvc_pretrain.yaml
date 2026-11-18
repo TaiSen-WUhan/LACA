@@ -1,0 +1,20 @@
+BACKBONE:
+  MODEL_TYPE: "convnext"
+  OUT_CHANNELS: 128
+  DROP_PATH: 0.3
+DATASETS:
+  TRAIN: ("sceneflow", "falling_things", "crestereo", "tartan_air", "carla_highres", "sintel_stereo", "vkitti2")
+  MUL: (1, 1, 1, 1, 80, 3, 3)
+  CROP_SIZE: [384, 768]
+  TEST: ("kitti_2012_trainval", "kitti_2015_trainval", "eth3d", "middlebury_Q")
+TEST:
+  EVAL_THRESH: (['3.0'], ['3.0'], ['1.0'], ['2.0'])
+  EVAL_MAX_DISP: [null, null, null, 1000]
+  EVAL_ONLY_VALID: (True, True, True, False)
+  EVAL_PROP: (True, True, True, True)
+SOLVER:
+  NO_RESUME_OPTIMIZER: True
+  IMS_PER_BATCH: 8
+  MAX_ITER: 200000
+  CHECKPOINT_PERIOD: 300000
+  MAX_DISP: 256

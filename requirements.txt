@@ -1,0 +1,13 @@
+# Install a matching torch/torchvision CUDA build first (see README.md).
+numpy>=1.24
+Pillow>=9.1
+opencv-python>=4.8
+imageio>=2.31
+einops>=0.7
+yacs>=0.1.8
+PyYAML>=6.0
+huggingface_hub>=0.23
+matplotlib>=3.6
+termcolor>=2.0
+tensorboard>=2.14
+# Optional acceleration: selective_scan_cuda_oflex (VMamba), xFormers.

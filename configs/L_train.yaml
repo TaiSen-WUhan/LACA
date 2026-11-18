@@ -1,0 +1,4 @@
+BACKBONE:
+  MODEL_TYPE: "convnext"
+  OUT_CHANNELS: 128
+  DROP_PATH: 0.2

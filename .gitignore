@@ -216,3 +216,18 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# LACA data, checkpoints, and generated outputs
+*.py[cod]
+# Model weights are distributed separately from the source code.
+weight/
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+datasets/
+checkpoints/
+results/
+*_submission/
+low_res_two_view/
+events.out.tfevents.*

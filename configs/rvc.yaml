@@ -1,0 +1,20 @@
+BACKBONE:
+  MODEL_TYPE: "convnext"
+  OUT_CHANNELS: 128
+  DROP_PATH: 0.3
+DATASETS:
+  TRAIN: ("crestereo", "tartan_air", "carla_highres", "vkitti2", "kitti_mix", "middlebury_2005", "middlebury_2006", "middlebury_2014", "middlebury_2021", "middlebury_Q", "middlebury_H", "eth3d", "in_stereo2k", "booster")
+  MUL: (1, 1, 30, 3, 100, 200, 200, 200, 200, 200, 200, 1000, 20, 10)
+  CROP_SIZE: [384, 768]
+  TEST: ("kitti_2012_trainval", "kitti_2015_trainval", "eth3d", "middlebury_Q")
+TEST:
+  EVAL_THRESH: (['3.0'], ['3.0'], ['1.0'], ['2.0'])
+  EVAL_MAX_DISP: [null, null, null, 1000]
+  EVAL_ONLY_VALID: (True, True, True, False)
+  EVAL_PROP: (True, True, True, True)
+SOLVER:
+  NO_RESUME_OPTIMIZER: True
+  IMS_PER_BATCH: 8
+  MAX_ITER: 100000
+  CHECKPOINT_PERIOD: 200000
+  MAX_DISP: 256
