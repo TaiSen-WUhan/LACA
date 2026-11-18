@@ -191,8 +191,6 @@ Validation runs every `TEST.EVAL_PERIOD` steps; set it to `0` to disable validat
 | Monocular branch | Depth Anything V2-L, frozen |
 | Coarse / refinement blocks | 5 / 5 |
 
-These settings are reported in the paper. The bundled defaults use a `[368, 784]` crop, and `configs/kitti_mix_train.yaml` uses 39,000 iterations. For those paper settings, override `DATASETS.CROP_SIZE` with `[384, 768]` and the KITTI `SOLVER.MAX_ITER` with `40000`.
-
 ## Evaluation
 
 ### Your Own Stereo Images
