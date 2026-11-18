@@ -6,7 +6,7 @@
 
 Sen Tai, Rui Cao, Wenting Li, Ziyang Chen, Yang Zhao, Yitong Yang, Yongjun Zhang, and Yong Xu
 
-[**Paper**](https://doi.org/10.1145/3767308.3835685) · [**Checkpoints**](#checkpoints) · [**Training**](#training) · [**Evaluation**](#evaluation) · [**Citation**](#citation)
+[**Paper**](https://doi.org/10.1145/3767308.3835685) · [**Weights (Google Drive)**](https://drive.google.com/drive/folders/1LoW-Z7Aj1PjMBokiLEehwRZiE2_y4Z-x) · [**Checkpoints**](#checkpoints) · [**Training**](#training) · [**Evaluation**](#evaluation) · [**Citation**](#citation)
 
 PyTorch implementation of **LACA**, a stereo matching framework that combines global contextual reasoning with local detail preservation through Laplacian-guided adaptive cost aggregation.
 
@@ -97,13 +97,15 @@ Building the extension requires a CUDA toolkit with `nvcc` and a compatible comp
 
 ## Checkpoints
 
+Download the pretrained weights from **[Google Drive](https://drive.google.com/drive/folders/1LoW-Z7Aj1PjMBokiLEehwRZiE2_y4Z-x)** and place the `.pth` files in the `weight/` directory at the project root. Keep the filenames listed below so the checkpoint aliases work directly.
+
 | Model | Stereo Encoder | Checkpoint |
 | --- | --- | --- |
 | LACA | Residual CNN | `laca.pth` |
 | LACA-L | ConvNeXt | `l-laca.pth` |
 | KITTI model | ConvNeXt | `kitti.pth` |
 
-Pretrained weights are not included in this repository. Place separately obtained model files in `weight/`. Each checkpoint includes the model configuration and the pretrained Depth Anything V2-L branch. Use the corresponding checkpoint for Scene Flow evaluation, zero-shot generalization, or KITTI evaluation.
+Weights are hosted on Google Drive and are not included in the Git repository. Each checkpoint includes the model configuration and the pretrained Depth Anything V2-L branch. Use the corresponding checkpoint for Scene Flow evaluation, zero-shot generalization, or KITTI evaluation.
 
 Both entry points and the Python API accept the following aliases or an explicit checkpoint path:
 
